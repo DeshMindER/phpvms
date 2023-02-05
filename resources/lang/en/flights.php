@@ -31,7 +31,7 @@ return [
         'addtl_cargo_mail'  => 'Cargo (Additional)',
         'charter_cargo'     => 'Cargo (Charter)',
         'mail_service'      => 'Mail Service',
-        'special_vip'       => 'VIP Flight',
+        'special_vip'       => 'Charter Flight',
         'ambulance'         => 'Ambulance',
         'training_flight'   => 'Training',
         'military'          => 'Military',

@@ -222,8 +222,8 @@ class SimBriefController
 
         $request->session()->put('simbrief_fares', array_merge($pax_load_sheet, $cargo_load_sheet));
 
-        // Show the main simbrief form
-        return view('flights.simbrief_form', [
+        // Show the main simbrief form        
+            return view('flights.simbrief_form', [
             'user'             => $user,
             'flight'           => $flight,
             'aircraft'         => $aircraft,
@@ -241,7 +241,7 @@ class SimBriefController
             'loaddist'         => implode(' ', $loaddist),
             'static_id'        => $static_id,
         ]);
-    }
+	}
 
     /**
      * Show the briefing

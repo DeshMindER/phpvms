@@ -11,6 +11,10 @@
   @component('mail::button', ['url' => url('/login')])
     Login & Reset Password
   @endcomponent
+<br/>
+  @component('mail::button', ['url' => url('https://discord.gg/u6ZHhSVrRZ')])
+    Discord Cruzeiro
+  @endcomponent
 
   Thanks,<br/>
   Management, {{ config('app.name') }}

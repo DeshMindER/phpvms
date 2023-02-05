@@ -17,7 +17,7 @@
   @yield('css')
 </head>
 
-<body class="login-page" style="background: #067ec1;">
+<body class="login-page" style="background: #222534;">
 <!-- Navbar -->
 
 <!-- End Navbar -->
@@ -27,17 +27,23 @@
     @yield('content')
   </div>
   <footer class="footer">
-    <div class="container">
-      <div class="copyright">
+  <div class="row">   
+  <div class="col-md-4">
+  </div>   
+  <div class="col-md-4">
+   <div align="center" style="color:white">
         &copy;
         <script>
           document.write(new Date().getFullYear())
         </script>
         , powered by
-        <a href="http://www.phpvms.net" target="_blank">phpvms</a>. Now-UI by
-        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
+        <a href="http://www.phpvms.net" style="color: #279fba;" target="_blank">phpvms</a>. Now-UI by
+        <a href="https://www.creative-tim.com" style="color: #279fba;" target="_blank">Creative Tim</a>
       </div>
-    </div>
+  </div>   
+  <div class="col-md-4">
+  </div> 
+  </div>    
   </footer>
 </div>
 </body>

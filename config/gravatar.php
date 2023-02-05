@@ -5,5 +5,5 @@
 
 return [
     'url'     => 'https://www.gravatar.com/avatar/',
-    'default' => env('GRAVATAR_DEFAULT_AVATAR', 'https://en.gravatar.com/userimage/12856995/aa6c0527a723abfd5fb9e246f0ff8af4.png'),
+    'default' => env('GRAVATAR_DEFAULT_AVATAR', 'https://en.gravatar.com/userimage/229718033/291b7d9a60f0d3a6fa411a6e92ff2c1b.png'),
 ];
