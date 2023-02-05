@@ -6,11 +6,11 @@
     <div class="card card-login card-plain">
       {{ Form::open(['url' => url('/login'), 'method' => 'post', 'class' => 'form']) }}
       <div class="header header-primary text-center">
-        <div class="logo-container" style="width: 320px;">
-          <img src="{{ public_asset('/assets/frontend/img/logo.svg') }}" width="320" height="320"
-               style="background: #FFF">
-        </div>
-      </div>
+        <div class="logo-container" style="width: 100%; background: transparent; padding-top: 13em;">
+			<img src="{{ public_asset('/assets/img/logo-white.png') }}" width="100%" height="50%"
+               style="background: transparent">
+              </div>
+      </div></br>
       <div class="card-body">
         <div class="input-group form-group-no-border{{ $errors->has('email') ? ' has-error' : '' }} input-lg">
           <div class="input-group-prepend">
@@ -29,7 +29,7 @@
         </div>
         @if ($errors->has('email'))
           <span class="help-block">
-              <strong>{{ $errors->first('email') }}</strong>
+              <strong style="color: #ff0000;">{{ $errors->first('email') }}</strong>
           </span>
         @endif
 
@@ -50,22 +50,22 @@
         </div>
         @if ($errors->has('password'))
           <span class="help-block">
-              <strong>{{ $errors->first('password') }}</strong>
+              &nbsp;&nbsp;<strong style="color: #ff0000;">{{ $errors->first('password') }}</strong>
           </span>
         @endif
 
       </div>
       <div class="footer text-center">
-        <button class="btn btn-primary btn-round btn-lg btn-block">@lang('common.login')</button>
+        <button  style="outline: #ffffff; color: #ffffff;" class="btn btn-outline-info btn-round btn-lg btn-block">@lang('common.login')</button>
       </div>
       <div class="pull-left">
         <h6>
-          <a href="{{ url('/register') }}" class="link">@lang('auth.createaccount')</a>
+          <a href="{{ url('/register') }}" style="color: #279fba;" class="link">@lang('auth.createaccount')</a>
         </h6>
       </div>
       <div class="pull-right">
         <h6>
-          <a href="{{ url('/password/reset') }}" class="link">@lang('auth.forgotpassword')?</a>
+          <a href="{{ url('/password/reset') }}" style="color: #279fba;" class="link">@lang('auth.forgotpassword')?</a>
         </h6>
       </div>
       {{ Form::close() }}

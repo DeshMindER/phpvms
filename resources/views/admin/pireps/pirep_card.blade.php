@@ -18,43 +18,61 @@
 					<div class="col-sm-6">
 						<div>
 							<span class="description">
-								<b>Pilot</b>&nbsp;{{ '('.$pirep->user_id.') '.optional($pirep->user)->name }}
+								<b>Pilot:</b>&nbsp;{{ '('.$pirep->user_id.') '.optional($pirep->user)->name }}
 							</span>
 						</div>
             <div>
 							<span class="description">
-								<b>DEP</b>&nbsp;{{ $pirep->dpt_airport_id }}&nbsp;
-								<b>ARR</b>&nbsp;{{ $pirep->arr_airport_id }}&nbsp;
+								<b>DEP:</b>&nbsp;{{ $pirep->dpt_airport_id }}&nbsp;
+								<b>ARR:</b>&nbsp;{{ $pirep->arr_airport_id }}&nbsp;
 							</span>
 						</div>
 						<div>
 							<span class="description">
-								<b>Flight Time</b>&nbsp; @minutestotime($pirep->flight_time)
+								<b>Flight Type:</b>&nbsp;{{ \App\Models\Enums\FlightType::label($pirep->flight_type) }}
+							</span>
+						</div>
+						<div>
+							<span class="description">
+								<b>Flight Time:</b>&nbsp; @minutestotime($pirep->flight_time)
 							</span>
 						</div>
 						@if($pirep->aircraft)
 						<div>
 							<span class="description">
-								<b>Aircraft</b>&nbsp;{{ $pirep->aircraft->registration }} @if($pirep->aircraft->registration != $pirep->aircraft->name) '{{ $pirep->aircraft->name }}' @endif
+								<b>Aircraft:</b>&nbsp;{{ $pirep->aircraft->registration }} @if($pirep->aircraft->registration != $pirep->aircraft->name) '{{ $pirep->aircraft->name }}' @endif
 							</span>
 						</div>
 						@endif
 						@if(filled($pirep->level) && $pirep->level > 10)
 						<div>
 							<span class="description">
-								<b>Flight Level</b>&nbsp;{{ $pirep->level }}
+								<b>Flight Level:</b>&nbsp;{{ $pirep->level }}
 							</span>
 						</div>
 						@endif
+						@if($pirep->score && $pirep->landing_rate)
 						<div>
 							<span class="description">
-								<b>Filed Using</b>&nbsp; {{ PirepSource::label($pirep->source) }}
+								<b>Score:</b>&nbsp;{{ $pirep->score }}
+							</span>
+						</div>
+						<div>
+							<span class="description">
+								<b>Landing Rate:</b>&nbsp;{{ number_format($pirep->landing_rate) }} Ft/min
+							</span>
+						</div>
+						@endif
+						-----------------------------------------------------
+						<div>
+							<span class="description">
+								<b>Filed Using:</b>&nbsp; {{ PirepSource::label($pirep->source) }}
 								@if(filled($pirep->source_name)) ({{ $pirep->source_name }}) @endif
 							</span>
 						</div>
 						<div>
 							<span class="description">
-								<b>File Date</b>&nbsp; {{ show_datetime($pirep->created_at) }}
+								<b>File Date:</b>&nbsp; {{ show_datetime($pirep->created_at) }}
 							</span>
 						</div>
 					</div>

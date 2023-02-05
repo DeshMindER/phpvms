@@ -270,7 +270,7 @@
 
 <div class="row">
   <!-- Active Field -->
-  <div class="col-sm-3">
+  <div class="col-sm-4">
     <div class="checkbox">
       <label class="checkbox-inline">
         {{ Form::label('active', 'Active:') }}
@@ -279,17 +279,7 @@
       </label>
     </div>
   </div>
-  <!-- Visible Field -->
-  <div class="col-sm-3">
-    <div class="checkbox">
-      <label class="checkbox-inline">
-        {{ Form::label('visible', 'Visible:') }}
-        <input name="visible" type="hidden" value="0" />
-        {{ Form::checkbox('visible') }}
-      </label>
-    </div>
-  </div>
-  <div class="col-6">
+  <div class="col-8">
     <div class="text-right">
       {{ Form::button('Save', ['type' => 'submit', 'class' => 'btn btn-info']) }}
     </div>

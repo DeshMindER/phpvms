@@ -46,7 +46,7 @@
   @include('admin.sidebar')
 
   <div class="main-panel">
-    <nav class="navbar navbar-default">
+    <nav style="background: #222534;" class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle">
